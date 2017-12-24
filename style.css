@@ -1,0 +1,150 @@
+.header{
+	width: 100%;
+	height: 60px;
+	width: 960px;
+	margin: 20px auto 20px;
+	background: #689CD2;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+
+.main{
+	display: flex;
+	width: 960px;
+	height: 500px;
+	background: #689CD2;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	margin: auto;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.form-container{
+
+	width: 450px;
+	height: 480px;
+	margin: 10px;
+	box-sizing: border-box;
+	display: flex;
+	padding-left: 40px;
+	border: 1px solid #190f0f;
+	border-radius: 0.25em;
+
+}
+
+.form-container h2, .list-container h2{
+	text-align: center;
+}
+.form-field{
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.form-field input{
+	padding: 0.5em;
+	font-size: 1em;
+	background: #adf4de;
+	border:1px solid #ccc;
+	border-width: 1px 1px 1px 1px;
+	border-radius: 0;
+}
+.form-field input:focus{
+	background: #fff;
+}
+.form-field label{
+	flex: 0 1 4em;
+	padding: 1em;
+	background: #adf4de;
+	border: 1px solid #ccc;
+	font-size: 1em;
+	text-align: center;
+	text-shadow:  0 1px 0 #fff;
+	line-height: 1;
+	border-radius: 0.25em 0 0 0.25em;
+}
+.form-field select{
+	background: #adf4de;
+	border:1px solid #ccc;
+	border-radius: 0 0.25em  0.25em 0;
+	font-size: 1em;
+}
+
+.submit-field input[type="submit"]{
+	flex:0 1 40% ;
+	padding: 0.8em;
+	font-size: 1em;
+	margin-top: 50px;
+	background: #adf4de;
+	border-radius: 0.25em;
+	border: 0;
+	transition:0.3s;
+	cursor: pointer;
+
+}
+input[type="submit"]:hover{
+	background: #45af3a;
+	color: #fff;
+}
+
+
+.list-container{
+
+	width: 450px;
+	height: 480px;
+	
+	margin: 10px;
+	
+	box-sizing: border-box;
+	display: flex;
+	
+	border: 1px solid #190f0f;
+	border-radius: 0.25em;
+	flex-direction: column;
+	align-items: center;
+}
+
+.list{
+	width: 400px;
+	border: 1px solid black;
+	margin: 0 auto;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+}
+.list-item{
+	flex-grow: 1;
+	
+	width: 100%;
+	margin: 3px;
+	display: flex;
+
+}
+.person-name{
+	flex-grow: 1.5;
+	border: 1px solid black;
+
+}
+
+.person-role{
+	flex-grow: 1;
+	border: 1px solid black;
+}
+.person-email{
+	flex-grow: 2;
+	border: 1px solid black;
+}
+
+.footer{
+	width: 100%;
+	height: 60px;
+	width: 960px;
+	margin: 20px auto 20px;
+	background: #689CD2;
+}
