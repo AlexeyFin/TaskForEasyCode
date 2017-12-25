@@ -8,6 +8,7 @@ jQuery(document).ready(function() {
 	}
 });
 
+
 class Person {
 	constructor(name, email){
 		this.name = name;
