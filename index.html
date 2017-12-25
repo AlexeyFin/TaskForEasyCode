@@ -16,15 +16,15 @@
 
 
 		<div class="form-container">
-			<form>
+			<form id="myForm">
 				<h2>Add new</h2>
 				<div class="form-field">
-					<label for="name">Name</label>
+					<label for="name" >Name</label>
 					<input type="text" name="first-name" id="name" placeholder="Your name">
-					<select>
-						<option value="">Admin</option>
-						<option value="">User</option>
-						<option value="">Guest</option>
+					<select id="role">
+						<option value="Admin">Admin</option>
+						<option value="User">User</option>
+						<option value="Guest">Guest</option>
 					</select>
 				</div>
 				<div class="form-field">
@@ -32,7 +32,7 @@
 					<input type="email" name="email" id="email" placeholder="youremail@gmail.com">
 				</div>
 				<div class="form-field submit-field">
-					<input type="submit" value="Add">
+					<input type="submit" value="Add" id="submit" >
 				</div>
 			</form>
 		
