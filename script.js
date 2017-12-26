@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
 		localStorage.setItem("totalList", serialList);
 
 	}
-
+	createTable(returnKey);
 
 });
 
@@ -95,16 +95,46 @@ $('#submit').click(function createPerson(event) {
 	returnList.push(obj);
 	var serialList = JSON.stringify(returnList);
 	localStorage.setItem("totalList", serialList);
-	console.log(returnList);
+	console.log(returnList.length);
+	//createTable(returnList);
+	addToTable(returnList);
 
 	
 	$('#myForm').trigger('reset');
 
 });
 
+var createTable = function (list){
 
-console.log()
+	
 
+	var length = list.length;
+
+
+	if (length != 0){
+		for (i = 0; i < length; i++){
+			var obj = list[i];
+			$('<div class = "list-item"><div class="person-name">' + obj.name +
+			'</div><div class="person-email">' + obj.email +
+			'</div><div class="person-role">' + obj.role +'</div></div>').appendTo('.list');
+
+		}
+	}
+
+}
+
+var addToTable = function(list){
+	var length = list.length;
+	var i = length - 1;
+	var obj = list[i];
+	var obj = list[i];
+			$('<div class = "list-item"><div class="person-name">' + obj.name +
+			'</div><div class="person-email">' + obj.email +
+			'</div><div class="person-role">' + obj.role +'</div></div>').appendTo('.list');
+
+
+
+}
 
 
 

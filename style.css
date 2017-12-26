@@ -124,21 +124,30 @@ input[type="submit"]:hover{
 	width: 100%;
 	margin: 3px;
 	display: flex;
+	height: 20px;
 
 }
 .person-name{
 	flex-grow: 1.5;
 	border: 1px solid black;
+	height: 20px;
+	padding-left: 10px;
+	
+
 
 }
 
 .person-role{
 	flex-grow: 1;
 	border: 1px solid black;
+	height: 20px;
+	padding-left: 10px;
 }
 .person-email{
 	flex-grow: 2;
 	border: 1px solid black;
+	height: 20px;
+	padding-left: 10px;
 }
 
 .footer{
