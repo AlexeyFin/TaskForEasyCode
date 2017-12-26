@@ -1,11 +1,14 @@
 jQuery(document).ready(function() {
-	var returnObj = JSON.parse(localStorage.getItem("myKey"));
-	if (returnObj == null){
-		var obj = 1;
-		var serialObj = JSON.stringify(obj);
-		localStorage.setItem("personKey", serialObj);
-		
+	
+	var returnKey = JSON.parse(localStorage.getItem("totalList"));
+	if (returnKey == null) {
+		var list = [];
+		var serialList = JSON.stringify(list);
+		localStorage.setItem("totalList", serialList);
+
 	}
+
+
 });
 
 
@@ -87,14 +90,12 @@ $('#submit').click(function createPerson(event) {
 		var obj = newGuest(personName, personEmail);
 
 	}
-	var key = JSON.parse(localStorage.getItem("personKey"));
-
-	var serialObj = JSON.stringify(obj);
-	localStorage.setItem(key, serialObj);
-	key++;
-	var serialKey = JSON.stringify(key);
-	localStorage.setItem("personKey",key);
-
+	
+	var returnList = JSON.parse(localStorage.getItem("totalList"));
+	returnList.push(obj);
+	var serialList = JSON.stringify(returnList);
+	localStorage.setItem("totalList", serialList);
+	console.log(returnList);
 
 	
 	$('#myForm').trigger('reset');
@@ -102,7 +103,7 @@ $('#submit').click(function createPerson(event) {
 });
 
 
-
+console.log()
 
 
 
