@@ -8,7 +8,6 @@ jQuery(document).ready(function() {
 
 	}
 	createTable(returnKey);
-
 });
 
 
@@ -96,41 +95,36 @@ $('#submit').click(function createPerson(event) {
 	var serialList = JSON.stringify(returnList);
 	localStorage.setItem("totalList", serialList);
 	console.log(returnList.length);
-	//createTable(returnList);
 	addToTable(returnList);
-
-	
 	$('#myForm').trigger('reset');
 
 });
 
 var createTable = function (list){
 
-	
-
 	var length = list.length;
-
 
 	if (length != 0){
 		for (i = 0; i < length; i++){
 			var obj = list[i];
-			$('<div class = "list-item"><div class="person-name">' + obj.name +
-			'</div><div class="person-email">' + obj.email +
-			'</div><div class="person-role">' + obj.role +'</div></div>').appendTo('.list');
-
+		$('<div class = "list-item">'+ 
+			'<input type = "text" class = "person-name" id = "person-name" readonly value= "'+ obj.name +'">' +
+			'<input type = "text" class = "person-email" id = "person-email" readonly value= "'+ obj.email +'">' + 
+			'<input type = "text" class = "person-role" id = "person-role" readonly value= "'+ obj.role  + '">'+
+			'</div>').appendTo('.list');
 		}
 	}
-
 }
 
 var addToTable = function(list){
 	var length = list.length;
 	var i = length - 1;
 	var obj = list[i];
-	var obj = list[i];
-			$('<div class = "list-item"><div class="person-name">' + obj.name +
-			'</div><div class="person-email">' + obj.email +
-			'</div><div class="person-role">' + obj.role +'</div></div>').appendTo('.list');
+	$('<div class = "list-item">'+ 
+			'<input type = "text" class = "person-name" id = "person-name" readonly value= "'+ obj.name +'">' +
+			'<input type = "text" class = "person-email" id = "person-email" readonly value= "'+ obj.email +'">' + 
+			'<input type = "text" class = "person-role" id = "person-role" readonly value= "'+ obj.role  + '">'+
+			'</div>').appendTo('.list');
 
 
 
@@ -140,6 +134,7 @@ var addToTable = function(list){
 
 
 
+	
 
 
 
@@ -148,13 +143,3 @@ var addToTable = function(list){
 
 
 
-
-
-
-// var adminName = $('#name').val();
-	// var adminEmail = $('#email').val();
-	// const objName = new Admin( adminName, adminEmail);
-	// console.log(objName);
-
-	// var serialObj = JSON.stringify(objName);
-	// localStorage.setItem("myKey", serialObj);
