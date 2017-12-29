@@ -130,9 +130,17 @@ var addToTable = function(list){
 
 }
 
+var test = $('#person-name');
+
+$('.list').on('dblclick', 'input', function(event) {
+	$('.person-name, .person-email, .person-role').removeAttr('readonly');
+});
+$('.list').on('blur', 'input', function(event) {
+	$('.person-name, .person-email, .person-role').attr({readonly:'readonly'});
+});
 
 
-
+$('.list').find('.person-name').hide('slow');
 
 	
 
